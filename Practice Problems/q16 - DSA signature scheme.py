@@ -10,7 +10,8 @@
 
 # Theroetically, if (p, q, α) are fixed and widely known,
 # the chosen d value is not affected, as long as d is kept secret and chosen randomly for each user.
-# Fixing the public parameters narrows the potiential values of d, but as long as the dlp problem remains hard in this group,
+# Fixing the public parameters narrows the potiential values of d,
+# but as long as the dlp problem remains hard in this group, due to the size of p and q,
 # the security of individual private keys is not compromised.
 
 
