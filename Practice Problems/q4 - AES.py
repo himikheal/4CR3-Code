@@ -20,6 +20,8 @@
 # Number of rounds nr = 10 or 12 or 14 based on key size
 
 # (e) The arithmetic in AES, such as multiplication, is integer arithmetic.
+
+# False
 # All arithmetic is done in the Galois field Gal(28)
 
 # (f) There are no known subexponential attacks against AES.
