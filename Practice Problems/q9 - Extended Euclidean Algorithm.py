@@ -1,14 +1,7 @@
-# s0 = 1, t0 = 0
-# s1 = 0, t1 = 1
-# i = 1
-# do
-# i = i + 1
-# ri = ri−2 mod ri−1
-# qi−1 = (ri−2 − ri)/ri−1
-# si = si−2 − qi−1si−1
-# ti = ti−2 − qi−1ti−1
-# while ri ̸ = 0
-# return gcd(r0, r1) = ri−1, s = si−1, t = ti−1
+# Let r0 = 112 and r1 = 86. Use the extended Euclidean algorithm to find s and t such that sr0 + tr1 = gcd(r0, r1).
+
+# s = 10
+# t = -13
 
 def extended_euclidean(a, b):
     s0, s1 = 1, 0
@@ -35,10 +28,30 @@ def extended_euclidean(a, b):
 # suppose a = 76523743 and b = 32486298361
 # find r and s such that ra + sb = 1
 
-a = 76523743
-b = 32486298361
+a = 112
+b = 86
 gcd, r, s = extended_euclidean(a, b)
 if gcd == 1:
     print(f"The modular inverse of {a} modulo {b} is {r % b}")
     print("r and s are:", r, s)
+else:
+    print(f"No modular inverse exists for {a} modulo {b} since gcd is {gcd}")
+    print("r and s are:", r, s)
+    
 
+
+
+
+# Extended Euclidean Algorithm Pseudocode
+
+# s0 = 1, t0 = 0
+# s1 = 0, t1 = 1
+# i = 1
+# do
+# i = i + 1
+# ri = ri−2 mod ri−1
+# qi−1 = (ri−2 − ri)/ri−1
+# si = si−2 − qi−1si−1
+# ti = ti−2 − qi−1ti−1
+# while ri ̸ = 0
+# return gcd(r0, r1) = ri−1, s = si−1, t = ti−1
